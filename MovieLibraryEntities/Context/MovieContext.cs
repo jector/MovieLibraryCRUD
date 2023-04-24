@@ -30,8 +30,8 @@ namespace MovieLibraryEntities.Context
                 .Build();
 
             optionsBuilder
-                //.LogTo(action => _logger.LogInformation(action), LogLevel.Information)
-                //.EnableSensitiveDataLogging()
+                .LogTo(action => _logger.LogInformation(action), LogLevel.Information)
+                .EnableSensitiveDataLogging()
                 .UseSqlServer(configuration.GetConnectionString("MovieContext")
             );
         }
